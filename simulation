@@ -1,0 +1,6 @@
+HEADER    TEST LIGAND STRUCTURE
+HETATM    1  C1  LIG     1      10.000  12.000   2.000  1.00 20.00           C  
+HETATM    2  O1  LIG     1       9.500  11.500   1.200  1.00 20.00           O  
+HETATM    3  N1  LIG     1      10.500  12.500   2.800  1.00 20.00           N  
+TER
+END
