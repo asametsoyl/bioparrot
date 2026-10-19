@@ -1,0 +1,8 @@
+{
+  "extName": { "message": "BioParrot – Academic Bilingual Translator" },
+  "extDescription": { "message": "Translate web pages, PDF papers and selected text bilingually. Academic and biomedical experts, terminology consistency, Claude/GPT/Gemini/DeepL/Google support." },
+  "cmdToggleTranslate": { "message": "Translate page / show original" },
+  "cmdToggleMode": { "message": "Switch bilingual / translation-only display" },
+  "cmdTranslateSelection": { "message": "Translate selected text" },
+  "cmdToggleHover": { "message": "Toggle hover translation" }
+}

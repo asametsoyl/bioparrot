@@ -1,0 +1,13 @@
+node_modules
+.output
+.wxt
+.DS_Store
+._*
+*.log
+stats.html
+web-ext.config.ts
+test-results
+playwright-report
+zotero/addon/content/scripts
+zotero/addon/content/pdf
+tests/e2e/fixtures/*.local.pdf

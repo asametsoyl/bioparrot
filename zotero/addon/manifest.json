@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "BioParrot",
+  "version": "0.1.0",
+  "description": "Academic-first bilingual translation for Zotero: translate selections in the PDF reader, titles and abstracts, and create layout-preserving bilingual PDFs.",
+  "homepage_url": "https://github.com/bioparrot/bioparrot",
+  "author": "BioParrot contributors",
+  "icons": {
+    "48": "content/icons/favicon.png",
+    "96": "content/icons/icon96.png"
+  },
+  "applications": {
+    "zotero": {
+      "id": "bioparrot@bioparrot.app",
+      "update_url": "https://raw.githubusercontent.com/bioparrot/bioparrot/main/zotero/updates.json",
+      "strict_min_version": "6.999",
+      "strict_max_version": "9.*"
+    }
+  }
+}

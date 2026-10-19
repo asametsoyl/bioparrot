@@ -1,0 +1,8 @@
+{
+  "extName": { "message": "BioParrot – Akademik İki Dilli Çeviri" },
+  "extDescription": { "message": "Web sayfalarını, PDF makaleleri ve seçili metinleri iki dilli çevirin. Akademik ve biyomedikal uzmanlar, terim tutarlılığı, Claude/GPT/Gemini/DeepL/Google desteği." },
+  "cmdToggleTranslate": { "message": "Sayfayı çevir / orijinali göster" },
+  "cmdToggleMode": { "message": "İki dilli / yalnız çeviri görünümünü değiştir" },
+  "cmdTranslateSelection": { "message": "Seçili metni çevir" },
+  "cmdToggleHover": { "message": "Fareyle çeviriyi aç/kapat" }
+}

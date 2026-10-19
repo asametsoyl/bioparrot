@@ -1,0 +1,15 @@
+pref("extensions.bioparrot.targetLanguage", "tr");
+pref("extensions.bioparrot.engineId", "google");
+pref("extensions.bioparrot.expertId", "academic");
+pref("extensions.bioparrot.openaiKey", "");
+pref("extensions.bioparrot.openaiModel", "");
+pref("extensions.bioparrot.anthropicKey", "");
+pref("extensions.bioparrot.anthropicModel", "");
+pref("extensions.bioparrot.geminiKey", "");
+pref("extensions.bioparrot.geminiModel", "");
+pref("extensions.bioparrot.deeplKey", "");
+pref("extensions.bioparrot.deepseekKey", "");
+pref("extensions.bioparrot.openrouterKey", "");
+pref("extensions.bioparrot.autoTranslateSelection", true);
+pref("extensions.bioparrot.annotationComment", false);
+pref("extensions.bioparrot.settingsJson", "");

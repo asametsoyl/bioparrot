@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sample paper for BioParrot tests</title>
+    <style>
+      @page { size: A4; margin: 18mm 16mm; }
+      body { font-family: 'Times New Roman', Times, serif; font-size: 10pt; line-height: 1.3; color: #111; margin: 0; }
+      h1 { font-size: 17pt; text-align: center; margin: 0 0 8pt; }
+      .authors { text-align: center; font-size: 10.5pt; margin-bottom: 2pt; }
+      .affil { text-align: center; font-size: 9pt; margin-bottom: 2pt; }
+      .email { text-align: center; font-family: 'Courier New', monospace; font-size: 8.5pt; margin-bottom: 14pt; }
+      .abstract { margin: 0 28pt 14pt; text-align: justify; }
+      .abstract h2 { text-align: center; font-size: 11pt; margin: 0 0 4pt; }
+      .cols { column-count: 2; column-gap: 18pt; text-align: justify; }
+      h2 { font-size: 11pt; margin: 10pt 0 4pt; }
+      p { margin: 0 0 6pt; }
+      .fig { break-inside: avoid; border: 1px solid #999; height: 90pt; margin: 6pt 0 4pt; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; font-size: 8pt; color: #555; }
+      .caption { font-size: 9pt; margin-bottom: 8pt; }
+      .eq { text-align: center; font-style: italic; margin: 6pt 0; }
+      ol.refs { font-size: 8.5pt; padding-left: 14pt; }
+    </style>
+  </head>
+  <body>
+    <h1>Loss of TP53 accelerates growth of intestinal organoids through mitochondrial remodeling</h1>
+    <div class="authors"><b>Ada Example</b> · <b>Deniz Sample</b> · <b>Kerem Test</b></div>
+    <div class="affil">Department of Molecular Biology, Example University</div>
+    <div class="email">{ada, deniz, kerem}@example.edu</div>
+    <div class="abstract">
+      <h2>Abstract</h2>
+      Intestinal organoids recapitulate many features of the adult epithelium, yet the metabolic consequences of tumor-suppressor loss remain poorly understood. Here we used CRISPR-Cas9 to delete TP53 in mouse intestinal organoids and combined live imaging with respirometry. TP53-deficient organoids grew 35% faster than controls (p &lt; 0.01) and displayed elongated mitochondria with increased oxygen consumption. These results suggest that mitochondrial remodeling contributes to the early proliferative advantage of TP53 loss.
+    </div>
+    <div class="cols">
+      <h2>1 Introduction</h2>
+      <p>Organoids derived from adult stem cells provide a tractable model of epithelial homeostasis and disease. Mutations in TP53 are among the most frequent alterations in colorectal cancer, but their immediate effects on cellular metabolism are difficult to isolate in vivo [1, 2].</p>
+      <p>Mitochondria integrate nutrient availability with growth signaling. Previous work has shown that p53 regulates the expression of genes involved in oxidative phosphorylation, suggesting a direct link between tumor suppression and energy metabolism [3].</p>
+      <h2>2 Materials and Methods</h2>
+      <p>Organoids were derived from the small intestine of C57BL/6 mice and maintained in Matrigel with standard growth factors. Guide RNAs targeting exon 5 of Trp53 were delivered by electroporation, and clones were validated by sequencing.</p>
+      <p>Oxygen consumption was measured with a Seahorse analyzer. Growth was quantified as the change in organoid area over 72 hours, and statistical significance was assessed with a two-sided t-test.</p>
+      <div class="eq">G = (A<sub>72</sub> − A<sub>0</sub>) / A<sub>0</sub></div>
+      <div class="fig">Control &nbsp;&nbsp; TP53 KO &nbsp;&nbsp; area (mm²)</div>
+      <div class="caption">Figure 1: Growth of control and TP53-deficient organoids over 72 hours. Bars show mean ± SD of three independent experiments.</div>
+      <h2>3 Results</h2>
+      <p>TP53-deficient organoids expanded significantly faster than controls and formed more crypt-like buds. Electron microscopy revealed elongated mitochondria with dense cristae, and basal respiration increased by 28% relative to controls.</p>
+      <p>Inhibition of mitochondrial fission partially reversed the growth advantage, indicating that mitochondrial dynamics are required for the phenotype.</p>
+      <h2>4 Discussion</h2>
+      <p>Our findings identify mitochondrial remodeling as an early consequence of TP53 loss in intestinal epithelium. Whether similar changes occur in human organoids and in tumors in vivo remains to be determined.</p>
+      <h2>References</h2>
+      <ol class="refs">
+        <li>Example A, Sample D. Organoids as models of intestinal disease. J Test Biol. 2020;12:1–10.</li>
+        <li>Test K, et al. TP53 mutations in colorectal cancer. Example Rev. 2019;4:22–31.</li>
+        <li>Sample D. p53 and oxidative phosphorylation. Mito Lett. 2018;7:5–9.</li>
+      </ol>
+    </div>
+  </body>
+</html>
