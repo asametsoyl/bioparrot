@@ -1,0 +1,70 @@
+name: Release
+
+# v* etiketi gönderilince (örn. v0.1.0) eklenti paketlerini derleyip GitHub Release olarak yayınlar.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Etiket ile package.json sürümünü karşılaştır
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          PKG="$(node -p "require('./package.json').version")"
+          if [ "$VERSION" != "$PKG" ]; then
+            echo "::error::Etiket $GITHUB_REF_NAME, package.json sürümü $PKG ile eşleşmiyor."
+            exit 1
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      - run: npm run compile
+      - run: npm test
+      - run: npm run zip
+      - run: npm run zip:firefox
+      - run: npm run build:zotero
+
+      - name: Sürüm notlarını hazırla
+        run: |
+          cat > release-notes.md <<EOF
+          ## Kurulum / Installation
+
+          | Dosya / File | Nereye / Where |
+          | --- | --- |
+          | \`bioparrot-${VERSION}-chrome.zip\` | Chrome, Edge, Brave: zip'i açın → \`chrome://extensions\` → *Geliştirici modu* → *Paketlenmemiş öğe yükle* / unzip → *Developer mode* → *Load unpacked* |
+          | \`bioparrot-${VERSION}-firefox.zip\` | Firefox: \`about:debugging#/runtime/this-firefox\` → *Geçici eklenti yükle* / *Load Temporary Add-on* |
+          | \`bioparrot-zotero-${VERSION}.xpi\` | Zotero 7–9: *Araçlar → Eklentiler → ⚙ → Dosyadan Eklenti Yükle…* / *Tools → Plugins → ⚙ → Install Plugin From File…* |
+          | \`bioparrot-${VERSION}-sources.zip\` | Kaynak kod (Firefox eklenti incelemesi için) / Source code for add-on review |
+
+          EOF
+
+      - name: GitHub Release yayınla
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          FILES=(
+            ".output/bioparrot-${VERSION}-chrome.zip"
+            ".output/bioparrot-${VERSION}-firefox.zip"
+            ".output/bioparrot-${VERSION}-sources.zip"
+            ".output/bioparrot-zotero-${VERSION}.xpi"
+          )
+          ls -la "${FILES[@]}"
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" "${FILES[@]}" --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" "${FILES[@]}" \
+              --title "BioParrot ${VERSION}" \
+              --notes-file release-notes.md \
+              --generate-notes
+          fi
