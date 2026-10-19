@@ -3,7 +3,7 @@ import { t } from '@/core/i18n';
 import { Card, Logo } from '@/ui/components';
 import type { SectionProps } from '../App';
 
-export const REPO_URL = 'https://github.com/bioparrot/bioparrot';
+export const REPO_URL = 'https://github.com/asametsoyl/bioparrot';
 
 export function AboutSection(_props: SectionProps) {
   const version = browser.runtime.getManifest().version;

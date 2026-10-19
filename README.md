@@ -88,6 +88,7 @@ BioParrot, okuduğunuz metnin **çevirisini orijinalin hemen altına** yerleşti
 Gereksinimler: **Node.js 22+** ve npm. Uçtan uca testler için Google Chrome da gerekir.
 
 ```bash
+git clone https://github.com/asametsoyl/bioparrot.git && cd bioparrot
 npm install
 npm run dev            # sıcak yenilemeli geliştirme (Chrome)
 npm run build          # Chrome/Edge  → .output/chrome-mv3

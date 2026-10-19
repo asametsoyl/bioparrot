@@ -1,0 +1,17 @@
+{
+  "addons": {
+    "bioparrot@bioparrot.app": {
+      "updates": [
+        {
+          "version": "0.1.0",
+          "update_link": "https://github.com/asametsoyl/bioparrot/releases/download/v0.1.0/bioparrot-zotero-0.1.0.xpi",
+          "applications": {
+            "zotero": {
+              "strict_min_version": "6.999"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

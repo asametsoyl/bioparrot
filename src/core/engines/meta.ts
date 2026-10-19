@@ -109,7 +109,7 @@ export const OPENAI_PRESETS: OpenAIPreset[] = [
     model: 'openai/gpt-4.1-mini',
     models: ['openai/gpt-4.1-mini', 'google/gemini-2.5-flash', 'deepseek/deepseek-chat', 'qwen/qwen-2.5-72b-instruct', 'meta-llama/llama-3.3-70b-instruct'],
     keyUrl: 'https://openrouter.ai/keys',
-    headers: { 'HTTP-Referer': 'https://github.com/bioparrot', 'X-Title': 'BioParrot' },
+    headers: { 'HTTP-Referer': 'https://github.com/asametsoyl/bioparrot', 'X-Title': 'BioParrot' },
   },
   {
     id: 'groq',
